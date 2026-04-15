@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "insight-2-profit"
+version = "0.1.0"
+description = ""
+authors = ["jtzero <jtzero511@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pyspark = "^4.1.1"
+
+
+[tool.poetry.group.development.dependencies]
+ruff = "^0.15.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

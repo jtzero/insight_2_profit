@@ -1,0 +1,12 @@
+tasks:
+  test:
+    cmd: "poetry run pytest"
+
+  lint:
+    cmd: "poetry run ruff check ."
+
+  format:
+    cmd: "poetry run ruff format ."
+
+  typecheck:
+    cmd: "pyright ."
