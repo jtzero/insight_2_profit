@@ -14,7 +14,7 @@ poethepoet = "^0.44.0"
 
 [tool.poetry.group.development.dependencies]
 ruff = "^0.15.10"
-pytest = "^8.0.0"
+pytest = ">=8,<10"
 
 [build-system]
 requires = ["poetry-core"]
