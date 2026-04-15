@@ -8,10 +8,13 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 pyspark = "^4.1.1"
+psycopg2 = "^2.9.11"
+poethepoet = "^0.44.0"
 
 
 [tool.poetry.group.development.dependencies]
 ruff = "^0.15.10"
+pytest = "^8.0.0"
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,4 +1,7 @@
 tasks:
+  pipeline:
+    cmd: "poetry run python scripts/run.py"
+
   test:
     cmd: "poetry run pytest"
 
@@ -10,3 +13,12 @@ tasks:
 
   typecheck:
     cmd: "pyright ."
+
+  pg-shell:
+    cmd: "poetry run psql"
+
+  db-recreate:
+    - cmd:
+        docker exec  -e PGPASSWORD="${PGPASSWORD}" insight_2_profit_postgres_1 psql -U ${PGUSER} -d postgres -c "DROP DATABASE ${PGDATABASE};"
+    - cmd:
+        docker exec  -e PGPASSWORD="${PGPASSWORD}" insight_2_profit_postgres_1 psql -U ${PGUSER} -d postgres -c "CREATE DATABASE ${PGDATABASE};"
